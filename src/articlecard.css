@@ -21,3 +21,9 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.article_card--button {
+  font-family: monospace;
+  font-size: smaller;
+  border-style: ridge;
+}

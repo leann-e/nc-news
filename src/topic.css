@@ -1,0 +1,11 @@
+.topic_name--list {
+  font-weight: bold;
+  text-transform: capitalize;
+  list-style-type: none;
+  line-height: 30px;
+  font-size: large;
+}
+
+.topic_title {
+  text-decoration: underline;
+}

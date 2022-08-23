@@ -14,21 +14,26 @@ const Article = () => {
 
   return (
     <>
-      <section className="article_card--single">
-        <h1 className="article_card--title2">{articleInfo.article.title}</h1>
-        <p>
-          Author: {articleInfo.article.author} | Topic:{" "}
-          {articleInfo.article.topic}
-        </p>
-        <div className="article_card--body">
-          <p>{articleInfo.article.body}</p>
-        </div>
-        <p>
-          Comments: {articleInfo.article.comment_count} | Votes:{" "}
-          {articleInfo.article.votes}
-        </p>
-        <button>View Comments</button>
-      </section>
+      {Object.keys(articleInfo).length ? (
+        <section className="article_card--single">
+          {" "}
+          <h1 className="article_card--title2">
+            {articleInfo.article.title}
+          </h1>{" "}
+          <p>
+            Author: {articleInfo.article.author} | Topic:{" "}
+            {articleInfo.article.topic}{" "}
+          </p>{" "}
+          <div className="article_card--body">
+            <p>{articleInfo.article.body}</p>{" "}
+          </div>{" "}
+          <p>
+            Comments: {articleInfo.article.comment_count} | Votes:{" "}
+            {articleInfo.article.votes}{" "}
+          </p>
+          <button>View Comments</button>{" "}
+        </section>
+      ) : null}
     </>
   );
 };

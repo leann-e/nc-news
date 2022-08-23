@@ -1,14 +1,21 @@
-import { fetchAllArticles } from "../api";
+import { fetchAllArticles, fetchArticlesByTopic } from "../api";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
   const [allArticles, setAllArticles] = useState([]);
+  const { topic_name } = useParams();
 
   useEffect(() => {
-    fetchAllArticles().then((fetchedArticles) => {
-      setAllArticles(fetchedArticles.articles);
-    });
-  }, []);
+    if (!topic_name) {
+      fetchAllArticles().then((fetchedArticles) => {
+        setAllArticles(fetchedArticles.articles);
+      });
+    } else
+      fetchArticlesByTopic(topic_name).then((topic) => {
+        setAllArticles(topic.articles);
+      });
+  }, [topic_name]);
 
   return (
     <>
@@ -24,6 +31,7 @@ const Home = () => {
                 <p className="article_card--comments">
                   Comments: {article.comment_count}
                 </p>
+                <button className="article_card--button">Read More</button>
               </li>
             );
           })}

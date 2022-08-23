@@ -4,7 +4,12 @@ const Navigation = () => {
   return (
     <section>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/" className="nav_space">
+          Home
+        </Link>
+        <Link to="/topics" className="nav_space">
+          Topics
+        </Link>
       </nav>
     </section>
   );

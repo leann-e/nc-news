@@ -5,3 +5,19 @@ export const fetchAllArticles = () => {
     }
   );
 };
+
+export const fetchAllTopics = () => {
+  return fetch("https://nc-news-leanne.herokuapp.com/api/topics").then(
+    (res) => {
+      return res.json();
+    }
+  );
+};
+
+export const fetchArticlesByTopic = (topic_name) => {
+  return fetch(
+    `https://nc-news-leanne.herokuapp.com/api/articles?topic=${topic_name}`
+  ).then((res) => {
+    return res.json();
+  });
+};

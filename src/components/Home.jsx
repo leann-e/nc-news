@@ -1,6 +1,7 @@
 import { fetchAllArticles, fetchArticlesByTopic } from "../api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [allArticles, setAllArticles] = useState([]);
@@ -31,7 +32,9 @@ const Home = () => {
                 <p className="article_card--comments">
                   Comments: {article.comment_count}
                 </p>
-                <button className="article_card--button">Read More</button>
+                <button className="article_card--button">
+                  <Link to={`/articles/${article.article_id}`}>Read More</Link>
+                </button>
               </li>
             );
           })}

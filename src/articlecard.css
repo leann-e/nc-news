@@ -15,6 +15,18 @@
   font-family: monospace;
 }
 
+.article_card--single {
+  border: 3px;
+  outline-color: black;
+  outline-width: 10px;
+  padding: 5px;
+  margin: 5px;
+  border-style: double;
+  line-height: 15px;
+  font-size: medium;
+  font-family: monospace;
+}
+
 .article_card--title {
   font-size: large;
   font-family: monospace;
@@ -22,8 +34,24 @@
   text-decoration: underline;
 }
 
+.article_card--title2 {
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 19px;
+}
+
 .article_card--button {
   font-family: monospace;
   font-size: smaller;
   border-style: ridge;
+}
+
+.article_card--body {
+  font-family: monospace;
+  border-left: 0;
+  border-right: 0;
+  border-style: double;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

@@ -21,3 +21,11 @@ export const fetchArticlesByTopic = (topic_name) => {
     return res.json();
   });
 };
+
+export const fetchArticleById = (article_id) => {
+  return fetch(
+    `https://nc-news-leanne.herokuapp.com/api/articles/${article_id}`
+  ).then((res) => {
+    return res.json();
+  });
+};

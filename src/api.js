@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const fetchAllArticles = () => {
   return fetch("https://nc-news-leanne.herokuapp.com/api/articles").then(
     (res) => {
@@ -28,4 +30,19 @@ export const fetchArticleById = (article_id) => {
   ).then((res) => {
     return res.json();
   });
+};
+
+export const incrementVotes = (article) => {
+  console.log(article);
+  return axios.patch(
+    `https://nc-news-leanne.herokuapp.com/api/articles/${article}`,
+    { inc_votes: 1 }
+  );
+};
+
+export const reduceVotes = (article) => {
+  return axios.patch(
+    `https://nc-news-leanne.herokuapp.com/api/articles/${article}`,
+    { inc_votes: -1 }
+  );
 };

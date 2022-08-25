@@ -1,15 +1,10 @@
-import {
-  fetchAllArticles,
-  fetchArticleById,
-  fetchArticlesByTopic,
-} from "../api";
+import { fetchAllArticles, fetchArticlesByTopic } from "../api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   const [allArticles, setAllArticles] = useState([]);
-  const [articleInfo, setArticleInfo] = useState({});
   const { topic_name } = useParams();
 
   useEffect(() => {

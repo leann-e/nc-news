@@ -3,6 +3,7 @@ import { fetchArticleById } from "../api";
 import { useParams } from "react-router-dom";
 import { incrementVotes, reduceVotes } from "../api";
 import Comments from "./Comments";
+import PostComment from "./PostComment";
 
 const Article = () => {
   const [articleInfo, setArticleInfo] = useState({});
@@ -82,6 +83,9 @@ const Article = () => {
           </button>
         </section>
       ) : null}
+      <section>
+        <PostComment />
+      </section>
       <section hidden id="articleComments">
         <Comments />
       </section>

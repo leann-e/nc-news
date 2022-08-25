@@ -20,7 +20,7 @@ const Comments = () => {
           <ul className="comment_card--list">
             {comments.map((comment) => {
               return (
-                <li className="comment_card" key={comment.comment_id}>
+                <li className="comment_card--single" key={comment.comment_id}>
                   <p className="comment_card--title2">{comment.author}: </p>
                   <p className="comment_card--body">{comment.body}</p>
                   <p>

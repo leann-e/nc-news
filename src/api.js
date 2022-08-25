@@ -53,3 +53,26 @@ export const fetchAllComments = (article_id) => {
     return res.json();
   });
 };
+
+export const postComment = (article_id, author, body) => {
+  return axios
+    .post(
+      `https://nc-news-leanne.herokuapp.com/api/articles/${article_id}/comments`,
+      {
+        username: author,
+        body: body,
+      }
+    )
+    .then((res) => {
+      return res;
+    })
+    .catch((err) => {
+      console.log(err.data);
+    });
+};
+
+export const fetchAllUsers = () => {
+  return fetch("https://nc-news-leanne.herokuapp.com/api/users").then((res) => {
+    return res.json();
+  });
+};

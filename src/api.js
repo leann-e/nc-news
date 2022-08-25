@@ -33,7 +33,6 @@ export const fetchArticleById = (article_id) => {
 };
 
 export const incrementVotes = (article) => {
-  console.log(article);
   return axios.patch(
     `https://nc-news-leanne.herokuapp.com/api/articles/${article}`,
     { inc_votes: 1 }
@@ -45,4 +44,12 @@ export const reduceVotes = (article) => {
     `https://nc-news-leanne.herokuapp.com/api/articles/${article}`,
     { inc_votes: -1 }
   );
+};
+
+export const fetchAllComments = (article_id) => {
+  return fetch(
+    `https://nc-news-leanne.herokuapp.com/api/articles/${article_id}/comments`
+  ).then((res) => {
+    return res.json();
+  });
 };

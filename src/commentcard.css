@@ -1,0 +1,57 @@
+.comment_card--list {
+  list-style-type: none;
+  align-content: center;
+}
+
+.comment_card {
+  border: 3px;
+  outline-color: black;
+  outline-width: 10px;
+  padding: 5px;
+  margin: 5px;
+  border-style: double;
+  line-height: 16px;
+  font-size: medium;
+  font-family: monospace;
+}
+
+.comment_card--single {
+  border: 3px;
+  outline-color: black;
+  outline-width: 10px;
+  padding: 5px;
+  margin: 5px;
+  border-style: double;
+  line-height: 15px;
+  font-size: medium;
+  font-family: monospace;
+}
+
+.comment_card--title {
+  font-size: large;
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.comment_card--title2 {
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 19px;
+}
+
+.comment_card--button {
+  font-family: monospace;
+  font-size: smaller;
+  border-style: ridge;
+}
+
+.comment_card--body {
+  font-family: monospace;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-style: double;
+  padding-bottom: 8px;
+}

@@ -2,6 +2,7 @@ import "./App.css";
 import "./articlecard.css";
 import "./navigation.css";
 import "./topic.css";
+import "./commentcard.css";
 import Navigation from "./components/Navigation";
 import Title from "./components/Title";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/topics" element={<Topics />} />
           <Route path="/topics/:topic_name" element={<Home />} />
           <Route path="/articles/:article_id" element={<Article />} />
+          <Route path="/articles/:article_id/comments" element={<Article />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -86,3 +86,9 @@ export const fetchAllArticles = (sort_by = "created_at", order = "DESC") => {
       return res.data;
     });
 };
+
+export const deleteComment = (comment_id) => {
+  return axios.delete(
+    `https://nc-news-leanne.herokuapp.com/api/comments/${comment_id}`
+  );
+};

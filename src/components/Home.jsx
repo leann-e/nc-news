@@ -11,15 +11,24 @@ const Home = () => {
   const { topic_name } = useParams();
 
   useEffect(() => {
+    const currentParams = Object.fromEntries([...searchParams]);
+
     if (!topic_name) {
-      fetchAllArticles(sortBy, order).then((fetchedArticles) => {
-        setAllArticles(fetchedArticles.articles);
-      });
+      fetchAllArticles(currentParams.sort_by, currentParams.order).then(
+        (fetchedArticles) => {
+          setAllArticles(fetchedArticles.articles);
+        }
+      );
     } else
       fetchArticlesByTopic(topic_name).then((topic) => {
         setAllArticles(topic.articles);
       });
-  }, [topic_name, sortBy, order]);
+
+    setSearchParams({
+      sort_by: currentParams.sort_by,
+      order: currentParams.order,
+    });
+  }, [topic_name, searchParams]);
 
   return (
     <>
@@ -57,10 +66,11 @@ const Home = () => {
         <button
           className="article_card--button"
           onClick={() => {
-            setSearchParams({ sort_by: sortBy, order: order });
             if (order === "DESC") {
+              setSearchParams({ sort_by: sortBy, order: "ASC" });
               setOrder("ASC");
             } else if (order === "ASC") {
+              setSearchParams({ sort_by: sortBy, order: "DESC" });
               setOrder("DESC");
             }
           }}

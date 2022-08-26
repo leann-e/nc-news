@@ -13,6 +13,13 @@ const PostComment = () => {
     postComment(article_id, currentUser.username, newBody);
   };
 
+  const button = document.getElementById("btn");
+  if (button) {
+    button.addEventListener("click", function handleClick() {
+      button.textContent = "Comment Posted!";
+    });
+  }
+
   return (
     <>
       <section className="comment_card--post">
@@ -31,7 +38,9 @@ const PostComment = () => {
           />
           <br />
           <br />
-          <button className="comment_card--button">Post Comment</button>
+          <button id="btn" className="comment_card--button">
+            Post Comment
+          </button>
         </form>
       </section>
     </>

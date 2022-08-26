@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export const fetchAllArticles = () => {
-  return fetch("https://nc-news-leanne.herokuapp.com/api/articles").then(
-    (res) => {
-      return res.json();
-    }
-  );
-};
+// export const fetchAllArticles = () => {
+//   return fetch("https://nc-news-leanne.herokuapp.com/api/articles").then(
+//     (res) => {
+//       return res.json();
+//     }
+//   );
+// };
 
 export const fetchAllTopics = () => {
   return fetch("https://nc-news-leanne.herokuapp.com/api/topics").then(
@@ -75,4 +75,14 @@ export const fetchAllUsers = () => {
   return fetch("https://nc-news-leanne.herokuapp.com/api/users").then((res) => {
     return res.json();
   });
+};
+
+export const fetchAllArticles = (sort_by = "created_at", order = "DESC") => {
+  return axios
+    .get(`https://nc-news-leanne.herokuapp.com/api/articles`, {
+      params: { sort_by, order },
+    })
+    .then((res) => {
+      return res.data;
+    });
 };

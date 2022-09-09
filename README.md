@@ -34,8 +34,8 @@ The hosted version of this project is available [here.](https://nc-news-lw.netli
 
 ## Tech Stack
 
-This project was built using `React`, and uses `react-router-dom` to handle the routing. It also makes use of `axios` for http requests.
+This project was built using React, and uses react-router-dom to handle the routing. It also makes use of axios for http requests.
 
 ## Versions
 
-This project was completed using `Node.js v18.3.0`
+This project was completed using Node.js v18.3.0.

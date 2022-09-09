@@ -8,7 +8,7 @@ It is written in JavaScript, with styling done using CSS.
 
 ## About the Project
 
-The overall aim of this project was to create an interface that utilises the GET, POST, PAST and DELETE API calls written in the backend section of this course, which can be found [here.](https://github.com/leann-e/be-nc-news-proj)
+The overall aim of this project was to create an interface that utilises the GET, POST, PATCH and DELETE API calls written in the backend section of this course, which can be found [here.](https://github.com/leann-e/be-nc-news-proj)
 
 It allows users to view a list of all the articles, which can then be sorted by the listed options such as votes or ascending order. There is also a seperarte navigation to allow users to only see articles from a specific topic.
 

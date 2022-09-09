@@ -4,7 +4,7 @@
 
 This is the solo frontend project for the Northcoders Bootcamp, which is built using React.
 
-It is written in JavaScript, with styling done using CSS.
+It is written in JavaScript, with minimal styling done using CSS.
 
 ## About the Project
 
